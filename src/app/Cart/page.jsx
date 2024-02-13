@@ -12,14 +12,14 @@ import CartContext from '../contexts/CartContext';
 const Cart = () => {
   const Router = useRouter();
   const { profile } = useContext(UserContext);
-  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
+  const { cartItems, removeFromCart } = useContext(CartContext);
   let userCountry = profile?.country || '';
   let countryCode = getCode(userCountry);
   let countryCurrency = countryToCurrency[countryCode];
   let currencySymbol = getSymbolFromCurrency(countryCurrency);
 
   const getTotalPrice = () => {
-    return Intl.NumberFormat().format(cartItems?.reduce((total, item) => total + item.quantity * item.price, 0));
+    return Intl.NumberFormat().format(cartItems.reduce((total, item) => total + item.quantity * item.price, 0));
   };
 
   const goToCheckout = () => {
@@ -28,7 +28,7 @@ const Cart = () => {
 
   return (
     <div className="pt-8 flex justify-center justify-items-center">
-      {cartItems?.length === 0 ? (
+      {cartItems.length === 0 ? (
         <div className="text-center text-2xl font-semibold pt-10">Your cart is empty.</div>
       ) : (
         <div>
@@ -40,10 +40,11 @@ const Cart = () => {
                 <th className="border border-slate-600 px-16">Name</th>
                 <th className="border border-slate-600 px-16">Quantity</th>
                 <th className="border border-slate-600 px-16">Price</th>
+                <th className="border border-slate-600 px-16">Total Price</th>
               </tr>
             </thead>
             <tbody>
-                {cartItems?.map((item) => (
+                {cartItems.map((item) => (
                   <tr key={item.id}>
                     <td className="justify-center justify-items-center">
                       <FontAwesomeIcon className="size-8 text-rose-600 px-8 cursor-pointer hover:scale-125" icon={faCircleXmark} onClick={() => removeFromCart(item)}/>
@@ -52,18 +53,19 @@ const Cart = () => {
                     <td className="border border-slate-600">{item.name}</td>
                     <td className="border border-slate-600">{item.quantity}</td>
                     <td className="border border-slate-600">{currencySymbol} {Intl.NumberFormat().format(item.price)}</td>
+                    <td className="border border-slate-600">{currencySymbol} {Intl.NumberFormat().format(item.price * item.quantity)}</td>
                   </tr>
                 ))}
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="4" className="py-8 font-bold">Total</td>
+                <td colSpan="5" className="py-8 font-bold"></td>
                 <td className="border border-slate-600 font-bold">{currencySymbol} {getTotalPrice()}</td>
               </tr>
             </tfoot>
           </table>
-          <div className="flex justify-center justify-items-center">
-            <button onClick={goToCheckout} disabled={cartItems?.length === 0} className="bg-blue-500 text-white rounded-md hover:bg-blue-700">
+          <div className="flex justify-center justify-items-center pt-10">
+            <button onClick={goToCheckout} disabled={cartItems.length === 0} className="bg-blue-500 text-white rounded-md hover:bg-blue-700">
               <div className="p-3">Go to Checkout</div>
             </button>
           </div>
