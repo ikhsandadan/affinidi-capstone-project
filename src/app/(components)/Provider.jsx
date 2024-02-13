@@ -22,7 +22,7 @@ export function Provider ({ children }) {
         event.preventDefault();
 
         let amount = Number(event?.target?.[0].value);
-        let priceFloat = parseFloat(price?.[product.id - 1]);
+        let priceFloat = parseFloat(price?.[product.id]);
         console.log(price);
 
         setCartItems((prevItems) => {
