@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "./src/**/*.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/hook/use-local-content.jsx", "src/app/hook/use-authentication.jsx", "src/app/hook/use-fetch-user-info-query.js", "src/app/api/auth/[...nextauth].js", "src/app/api/auth/get-user-info.js", "src/app/api/auth/[...nextauth].js", "src/app/components/Session.jsx", "src/app/api/auth/[...nextauth]/options.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
