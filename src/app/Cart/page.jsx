@@ -19,7 +19,7 @@ const Cart = () => {
   let currencySymbol = getSymbolFromCurrency(countryCurrency);
 
   const getTotalPrice = () => {
-    return Intl.NumberFormat().format(cartItems.reduce((total, item) => total + item.quantity * item.price, 0));
+    return Intl.NumberFormat().format(cartItems?.reduce((total, item) => total + item.quantity * item.price, 0));
   };
 
   const goToCheckout = () => {
@@ -28,7 +28,7 @@ const Cart = () => {
 
   return (
     <div className="pt-8 flex justify-center justify-items-center">
-      {cartItems.length === 0 ? (
+      {cartItems?.length === 0 ? (
         <div className="text-center text-2xl font-semibold pt-10">Your cart is empty.</div>
       ) : (
         <div>
@@ -44,7 +44,7 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-                {cartItems.map((item) => (
+                {cartItems?.map((item) => (
                   <tr key={item.id}>
                     <td className="justify-center justify-items-center">
                       <FontAwesomeIcon className="size-8 text-rose-600 px-8 cursor-pointer hover:scale-125" icon={faCircleXmark} onClick={() => removeFromCart(item)}/>
@@ -65,7 +65,7 @@ const Cart = () => {
             </tfoot>
           </table>
           <div className="flex justify-center justify-items-center pt-10">
-            <button onClick={goToCheckout} disabled={cartItems.length === 0} className="bg-blue-500 text-white rounded-md hover:bg-blue-700">
+            <button onClick={goToCheckout} disabled={cartItems?.length === 0} className="bg-blue-500 text-white rounded-md hover:bg-blue-700">
               <div className="p-3">Go to Checkout</div>
             </button>
           </div>
