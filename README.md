@@ -14,6 +14,7 @@ For this bounty, I have included additional information that can be retrieved fr
 I have also added several features that utilize the user information from Affinidi, and have made some changes to the app's appearance. Here is a list of the updates:
 
  **1. Navbar**
+ 
   First, I modified the navbar display by adding the user's profile picture and changing the greeting from using the givenName or first name to instead use the nickname retrieved from Affinidi.
   
   Here is the updated display and the code I used:
