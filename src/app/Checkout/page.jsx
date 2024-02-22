@@ -67,7 +67,7 @@ const Checkout = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="middleName">Last Name</label>
+          <label htmlFor="middleName">Middle Name</label>
           <input 
             type="text" 
             name="middleName" 
