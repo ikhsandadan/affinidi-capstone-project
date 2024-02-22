@@ -32,8 +32,16 @@ const provider = {
             ?.country,
             givenName: profile.custom?.find((i) => typeof i.givenName === "string")
             ?.giveNname,
+            middleName: profile.custom?.find((i) => typeof i.middleName === "string")
+            ?.middleName,
             familyName: profile.custom?.find((i) => typeof i.familyName === "string")
             ?.familyName,
+            nickname: profile.custom?.find((i) => typeof i.nickname === "string")
+            ?.nickname,
+            birthdate: profile.custom?.find((i) => typeof i.birthdate === "string")
+            ?.birthdate,
+            gender: profile.custom?.find((i) => typeof i.gender === "string")
+            ?.gender,
             phoneNumber: profile.custom?.find((i) => typeof i.phoneNumber === "string")
             ?.phoneNumber,
             postalCode: profile.custom?.find((i) => typeof i.postalCode === "string")
@@ -80,9 +88,21 @@ export const options = {
             user.givenName = profileItems.find(
                 (item) => typeof item.givenName === "string"
             )?.givenName;
+            user.middleName = profileItems.find(
+                (item) => typeof item.middleName === "string"
+            )?.middleName;
             user.familyName = profileItems.find(
                 (item) => typeof item.familyName === "string"
             )?.familyName;
+            user.nickname = profileItems.find(
+                (item) => typeof item.nickname === "string"
+            )?.nickname;
+            user.birthdate = profileItems.find(
+                (item) => typeof item.birthdate === "string"
+            )?.birthdate;
+            user.gender = profileItems.find(
+                (item) => typeof item.gender === "string"
+            )?.gender;
             user.phoneNumber = profileItems.find(
                 (item) => typeof item.phoneNumber === "string"
             )?.phoneNumber;
