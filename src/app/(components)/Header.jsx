@@ -35,6 +35,8 @@ const Header = () => {
   useEffect(() => {
     setLocalProfile(sessions?.user)
     setProfile(sessions?.user);
+    console.log(sessions?.user?.nickname)
+    console.log(sessions?.user)
   }, [sessions])
 
   const logout = () => {
