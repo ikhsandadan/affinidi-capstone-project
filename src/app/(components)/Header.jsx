@@ -46,7 +46,7 @@ const Header = () => {
     if (sessions?.user !== undefined) {
         return (
           <div className="flex auto-rows-auto gap-x-3 pr-3">
-            {localProfile && (<span className="self-center text-center">Welcome, {localProfile.givenName}</span>)}
+            {localProfile && (<span className="self-center text-center">Welcome, {localProfile.nickname}</span>)}
             <img src={profilePicture} alt="picture" className="size-10 rounded-full self-center"></img>
             <button onClick={toCart}>
               <img className="size-6" src="/cart.png" alt="Cart"/>
