@@ -25,6 +25,7 @@ I have also added several features that utilize the user information from Affini
 
 
  **2.  Product Display**
+ 
  ![2-1](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/45002cc0-40bc-4014-916b-d70d7dac698c)
 
  Here I also added some features including:
@@ -43,6 +44,7 @@ I have also added several features that utilize the user information from Affini
 
 
 **3. Modal**
+
 For this update, I also changed the appearance of all modals by utilizing the Modal component from the Material-UI (MUI) library.
 
 Using the Modal component from MUI allows for a consistent and modern modal design across the application. MUI provides pre-built, customizable React components that adhere to Google's Material Design guidelines. Replacing custom-built modals with MUI's Modal component leads to a more polished and cohesive user interface while reducing development effort required to style modals from scratch.
@@ -54,6 +56,7 @@ Using the Modal component from MUI allows for a consistent and modern modal desi
 
 
 **4. Cart**
+
 On the Cart page, I centered the table and added a delete item button to the left side of each row.
 
 Centering the cart table helps improve the visual layout and balance of the page. Adding a dedicated delete button for each item provides a clear and intuitive way for users to remove items from their cart. Placing the delete button on the left side follows common patterns and makes it easily accessible.
@@ -64,6 +67,7 @@ Centering the cart table helps improve the visual layout and balance of the page
 
 
 **5. Checkout**
+
 On the checkout page, I centered the user information table and also included the user's middle name retrieved from Affinidi.
 
 Centering the user information table creates a balanced and visually appealing layout for the checkout page. Adding the middle name field enhances the personalization of the checkout experience by displaying more complete name information about the user. Utilizing data from Affinidi allows you to pre-populate fields like the middle name automatically, saving users from having to manually enter this information.
