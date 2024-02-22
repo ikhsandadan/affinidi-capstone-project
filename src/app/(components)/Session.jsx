@@ -11,14 +11,36 @@ const Session = async () => {
     const email = session?.email;
     const picture = session?.picture;
     const country = session?.country;
-    const givenName = session?.givenName;
+    const firstName = session?.givenName;
+    const middleName = session?.middleName;
     const familiyName = session?.familyName;
+    const nickname = session?.nickname;
+    const birthdate = session?.birthdate;
+    const gender = session?.gender;
     const phoneNumber = session?.phoneNumber;
     const postalCode = session?.postalCode;
     const streetAddress = session?.streetAddress;
     const locality = session?.locality;
     
-    return {accessToken, idToken, userId, user, email, picture, country, givenName, familiyName, phoneNumber, postalCode, streetAddress, locality};
+    return {
+        accessToken, 
+        idToken, 
+        userId, 
+        user, 
+        email, 
+        picture, 
+        country, 
+        firstName, 
+        middleName, 
+        familiyName, 
+        nickname, 
+        birthdate, 
+        gender, 
+        phoneNumber, 
+        postalCode, 
+        streetAddress, 
+        locality
+    };
 }
 
-export default Session
+export default Session;
