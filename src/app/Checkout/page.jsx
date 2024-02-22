@@ -22,6 +22,7 @@ const Checkout = () => {
 
   const [userData, setUserData] = useState({
     firstName: profile?.givenName || '',
+    middleName: profile?.middleName || '',
     lastName: profile?.familyName || '', 
     email: profile?.email || '',
     phone: profile?.phoneNumber || '', 
@@ -64,6 +65,16 @@ const Checkout = () => {
             id="firstName"
             value={userData.firstName} 
             onChange={handleChange}
+          />
+
+          <label htmlFor="middleName">Last Name</label>
+          <input 
+            type="text" 
+            name="middleName" 
+            id="middleName"
+            value={userData.middleName} 
+            onChange={handleChange} 
+            required 
           />
 
           <label htmlFor="lastName">Last Name</label>
