@@ -39,10 +39,10 @@ const ProductDisplay = () => {
     try {
       // fetch the data from API
       const response = await fetch(
-        `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/${countryCurrency.toLowerCase()}.json`
+        `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`
         ).then(resp => resp.json());
 
-        setRates(response[countryCurrency.toLowerCase()]);
+        setRates(response?.usd[countryCurrency.toLowerCase()]);
     } catch(e) {
       console.log("Loading");
     }
