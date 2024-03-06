@@ -74,7 +74,7 @@ Centering the user information table creates a balanced and visually appealing l
 
 Displaying the user's full name prominently on the checkout page helps build trust and provides a more personalized checkout flow. Overall, these changes contribute to a polished and user-friendly experience during the crucial checkout process.
 
-![5-1](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/81f3ddde-1a4a-4cb1-933a-a31f4449a2d7)
+![5-1](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/f708aad7-9943-4167-b4f4-691ed6901aad)
 ![5-2](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/95c8f4b7-2f21-46b5-a1cb-5c3b822680e3)
 ![5-3](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/72b4a106-efcf-42c2-a0f9-2fb4c707b18f)
 
