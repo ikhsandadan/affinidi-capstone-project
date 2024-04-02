@@ -4,6 +4,8 @@
 
 ![home](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/3fcd771e-38fe-4cfe-8bd3-85ba73473d5e)
 
+https://affinidi-capstone-project.vercel.app/
+
 For this bounty, I have included additional information that can be retrieved from Affinidi about the user, such as their middle name, nickname, and profile picture.
 
 ![0-2](https://github.com/ikhsandadan/affinidi-capstone-project/assets/116878888/e52990af-e2c3-4631-9c5a-3832b2d850bd)
